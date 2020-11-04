@@ -1,0 +1,11 @@
+spring:
+  r2dbc:
+    url: r2dbc:mariadb://localhost:3326/apidb?useUnicode=true&characterEncoding=utf8
+    username: root
+    password: 123456
+logging:
+  level:
+    org:
+      springframework:
+        data:
+          r2dbc: DEBUG
