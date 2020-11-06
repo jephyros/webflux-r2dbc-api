@@ -1,6 +1,6 @@
 package kr.chis.webfluxr2dbcapi.book.entity;
 
-import lombok.Data;
+import lombok.*;
 import org.springframework.data.annotation.Id;
 
 /**
@@ -10,9 +10,14 @@ import org.springframework.data.annotation.Id;
  */
 
 
-@Data
+@Getter
+@Setter
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+
 public class Book {
     private Long id;
-    private String bookId;
-    private String bookName;
+    private String book_id;
+    private String book_name;
 }

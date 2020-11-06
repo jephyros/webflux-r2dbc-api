@@ -5,6 +5,7 @@ import kr.chis.webfluxr2dbcapi.book.entity.BookRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Flux;
+import reactor.core.publisher.Mono;
 
 /**
  * @author InSeok
@@ -18,5 +19,8 @@ public class BookService {
 
     public Flux<Book> findAll(){
         return bookRepository.findAll();
+    }
+    public Mono<Book> save(Book book){
+        return bookRepository.save(book);
     }
 }
